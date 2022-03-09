@@ -1,0 +1,23 @@
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened="true" class="side-container">
+    <img src="/assets/icons/logo.svg" class="logo" alt="logo" />
+    <mat-nav-list *ngFor="let tab of tabs" class="nav-list">
+      <a mat-list-item [routerLink]="tab.link" routerLinkActive="active">{{
+        tab.name
+      }}</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="main-container">
+    <app-header
+      [showSearchBar]="
+        router.isActive('project-board', {
+          paths: 'exact',
+          queryParams: 'exact',
+          fragment: 'ignored',
+          matrixParams: 'ignored'
+        })
+      "
+    ></app-header>
+    <router-outlet></router-outlet
+  ></mat-drawer-content>
+</mat-drawer-container>

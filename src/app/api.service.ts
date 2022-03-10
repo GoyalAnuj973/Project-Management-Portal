@@ -14,6 +14,10 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
+  login(data: any): Observable<any> {
+    return this.http.post(environment.API_URL + 'auth/login', data);
+  }
+
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(environment.API_URL + 'user', {
       headers: this.header

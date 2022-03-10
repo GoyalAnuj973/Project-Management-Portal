@@ -1,0 +1,43 @@
+<!-- <p>login-page works!</p> -->
+<mat-drawer-container class="container">
+    <mat-drawer mode="side" opened="true" class="side-container">
+        <div>
+            <img src="../../../assets/icons/logo.svg" class="logo" alt="logo" />
+        </div>
+        <div>
+
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <section class="main-container">
+            <section class="login-container">
+                <h1 class="heading global-text-heading-4">Login</h1>
+                <section class="login-form-container">
+                    <form [formGroup]="loginForm">
+                        <div class="row">
+                            <div class="column">
+                                <mat-label for="email">Email</mat-label>
+                                <mat-form-field class="email" appearance="fill">
+                                    <input formControlName="email" matInput placeholder="Email" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <mat-label for="password">Password</mat-label>
+                                <mat-form-field class="password" appearance="fill">
+                                    <input type="password" formControlName="password" matInput placeholder="Password" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <app-button 
+                            (btnClick)="loginProcess()"
+                            [text]="'Login'"
+                            [btnType]="'primary'"
+                        ></app-button>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </mat-drawer-content>
+</mat-drawer-container>

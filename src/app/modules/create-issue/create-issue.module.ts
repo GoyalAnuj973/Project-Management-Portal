@@ -1,6 +1,6 @@
 import { ButtonModule } from './../../components/button/button.module';
 // import { ButtonComponent } from './../../components/button/button.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from "@angular/core";
 import { CreateIssueComponent } from "./create-issue.component";
 import { CommonModule } from '@angular/common';
@@ -16,6 +16,13 @@ import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 // import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+const routes: Routes = [
+    {
+        path: '',
+        component: CreateIssueComponent
+    }
+]
 
 @NgModule({
     declarations: [
@@ -36,6 +43,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
         MatIconModule,
         ButtonModule,
         MatInputModule,
+        RouterModule.forChild(routes)
     ],
     exports: [
         CreateIssueComponent,

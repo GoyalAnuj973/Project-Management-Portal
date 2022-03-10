@@ -23,19 +23,19 @@ const routes: Routes = [
       },
       {
         path: 'create-issue',
-        component: CreateIssueComponent
+        loadChildren: () => import('./modules/create-issue/create-issue.module').then(mod => mod.CreateIssueModule)
       },
       {
         path: 'create-project',
-        component: CreateProjectComponent
+        loadChildren: () => import('./modules/create-project/create-project.module').then(mod => mod.CreateProjectModule)
       },
       {
         path: 'view-insights/:id',
-        component: ViewInsightsComponent
+        loadChildren: () => import('./modules/view-insights/view-insights.module').then(mod => mod.ViewInsightsModule)
       },
       {
         path: 'issue-details/:id',
-        component: IssueDetailsComponent
+        loadChildren: () => import('./modules/issue-details/issue-details.module').then(mod => mod.IssueDetailsModule)
       }
     ]
   }

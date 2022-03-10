@@ -1,3 +1,5 @@
+import { ButtonModule } from './components/button/button.module';
+import { CreateIssueModule } from './modules/create-issue/create-issue.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +24,7 @@ import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PersonComponent } from './components/person/person.component';
-import { CreateIssueComponent } from './modules/create-issue/create-issue.component';
+// import { CreateIssueComponent } from './modules/create-issue/create-issue.component';
 import { CreateProjectComponent } from './modules/create-project/create-project.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { IssueDetailsComponent } from './modules/issue-details/issue-details.component';
@@ -36,9 +38,9 @@ import { ViewInsightsComponent } from './modules/view-insights/view-insights.com
     NavbarComponent,
     DashboardComponent,
     CreateProjectComponent,
-    CreateIssueComponent,
+    // CreateIssueComponent,
     HeaderComponent,
-    ButtonComponent,
+    // ButtonComponent,
     CardComponent,
     ViewInsightsComponent,
     TeammatesComponent,
@@ -63,7 +65,9 @@ import { ViewInsightsComponent } from './modules/view-insights/view-insights.com
     MatDatepickerModule,
     MatNativeDateModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    CreateIssueModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

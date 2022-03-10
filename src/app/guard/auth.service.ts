@@ -27,11 +27,11 @@ export class AuthService {
 
     loginUser(credentials: any) {
         this.apiService.login(credentials).subscribe((response) => {
-            if(response.message == 'User signed in') {
+            if(response.message == 'User signed in!') {
                 this.setUser(response.userId);
                 this.router.navigateByUrl('/project-board');
             }
-            return new Error('failed login');
+            return new Error('failed to login');
         });
     }
 }

@@ -1,7 +1,7 @@
 import { CardModule } from './../../components/card/card.module';
 import { DashboardComponent } from './dashboard.component';
 import { NgModule } from "@angular/core";
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -17,6 +17,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+
+const routes: Routes = [
+    {
+        path: '',
+        component: DashboardComponent
+    }
+]
 
 @NgModule({
     declarations: [
@@ -42,6 +49,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
         MatButtonModule,
         ButtonModule,
         CardModule,
+        RouterModule.forChild(routes)
     ],
     exports: [
         DashboardComponent

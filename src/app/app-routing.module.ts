@@ -3,11 +3,11 @@ import { AuthGuard } from './guard/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CreateIssueComponent } from './modules/create-issue/create-issue.component';
-import { CreateProjectComponent } from './modules/create-project/create-project.component';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { IssueDetailsComponent } from './modules/issue-details/issue-details.component';
-import { ViewInsightsComponent } from './modules/view-insights/view-insights.component';
+// import { CreateIssueComponent } from './modules/create-issue/create-issue.component';
+// import { CreateProjectComponent } from './modules/create-project/create-project.component';
+// import { DashboardComponent } from './modules/dashboard/dashboard.component';
+// import { IssueDetailsComponent } from './modules/issue-details/issue-details.component';
+// import { ViewInsightsComponent } from './modules/view-insights/view-insights.component';
 
 const routes: Routes = [
   {
@@ -26,7 +26,7 @@ const routes: Routes = [
     children: [
       {
         path: 'project-board',
-        component: DashboardComponent
+        loadChildren: () => import('./modules/dashboard/dashboard.module').then(mod => mod.DashboardModule)
       },
       {
         path: 'create-issue',

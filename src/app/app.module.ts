@@ -31,6 +31,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PersonComponent } from './components/person/person.component';
 import { LoginPageComponent } from './modules/login-page/login-page.component';
+import { EffectsModule } from '@ngrx/effects';
 // import { CreateIssueComponent } from './modules/create-issue/create-issue.component';
 // import { CreateProjectComponent } from './modules/create-project/create-project.component';
 // import { DashboardComponent } from './modules/dashboard/dashboard.component';
@@ -81,7 +82,8 @@ import { LoginPageComponent } from './modules/login-page/login-page.component';
     IssueDetailsModule,
     TeammatesModule,
     ViewInsightsModule,
-    CardModule
+    CardModule,
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
